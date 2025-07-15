@@ -4,6 +4,10 @@ A modern, responsive web application for calculating exchange rates based on inv
 
 **🌐 Live Demo**: [https://tdrayson.github.io/exchange-rate-calculator/](https://tdrayson.github.io/exchange-rate-calculator/)
 
+**Version**: 1.1.0
+
+**Last Updated**: July 2025
+
 ## Features
 
 - **Real-time Calculations**: Instantly calculate exchange rates as you input values
@@ -91,9 +95,6 @@ This project is open source and available under the MIT License.
 Feel free to submit issues, feature requests, or pull requests to improve the calculator.
 
 ---
-
-**Version**: 1.1.0
-**Last Updated**: July 2025
 
 ## Changelog
 
