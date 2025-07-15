@@ -82,14 +82,6 @@ exchange-rate-calculator/
 - Clean, readable code with proper comments
 - DRY (Don't Repeat Yourself) principles
 
-### Future Enhancements
-
-- API integration for real-time exchange rates
-- Historical rate tracking
-- Multiple currency pair support
-- Export functionality
-- Dark mode theme
-
 ## License
 
 This project is open source and available under the MIT License.
@@ -102,3 +94,36 @@ Feel free to submit issues, feature requests, or pull requests to improve the ca
 
 **Version**: 1.1.0
 **Last Updated**: July 2025
+
+## Changelog
+
+All notable changes to this project will be documented in this section.
+
+### [1.1.0] - 2025-07-15
+
+#### Changed
+
+- Refactored JavaScript code to use class-based architecture
+- Converted global functions to class methods within `ExchangeRateCalculator` class
+- Added proper DOM ready event listener (`DOMContentLoaded`)
+- Improved code organization and maintainability
+- Enhanced encapsulation by converting global variables to instance properties
+
+#### Technical Improvements
+
+- Better separation of concerns with dedicated methods:
+  - `initializeElements()` - Centralizes DOM element references
+  - `bindEvents()` - Groups all event listeners
+  - All calculation and UI update methods now properly scoped
+- Eliminated global variable pollution
+- Improved code readability and structure
+
+### [1.0.0] - Initial Release
+
+#### Added
+
+- Exchange rate calculator functionality
+- Support for multiple currencies
+- Real-time input validation
+- Copy rate to clipboard feature
+- Responsive design with view switching
