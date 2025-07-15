@@ -2,6 +2,8 @@
 
 A modern, responsive web application for calculating exchange rates based on invoice amounts, fees, and target currency values. Built with vanilla JavaScript using a clean, class-based architecture.
 
+**🌐 Live Demo**: [https://tdrayson.github.io/exchange-rate-calculator/](https://tdrayson.github.io/exchange-rate-calculator/)
+
 ## Features
 
 - **Real-time Calculations**: Instantly calculate exchange rates as you input values
