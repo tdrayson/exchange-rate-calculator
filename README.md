@@ -98,6 +98,12 @@ Feel free to submit issues, feature requests, or pull requests to improve the ca
 
 All notable changes to this project will be documented in this section.
 
+### [1.1.1] - 2025-09-17
+
+#### Added
+
+- Ability to paste values with commas
+
 ### [1.1.0] - 2025-07-15
 
 #### Changed
