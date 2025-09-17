@@ -32,7 +32,18 @@ class ExchangeRateCalculator {
     });
 
     [this.invoiceInput, this.feeInput, this.gbpInput].forEach((el) => {
-      el.addEventListener('input', () => this.validateInputs());
+      el.addEventListener('input', () => {
+        el.value = this.sanitizeNumericString(el.value);
+        this.validateInputs();
+      });
+      el.addEventListener('paste', (event) => {
+        event.preventDefault();
+        const pastedText = (
+          event.clipboardData || window.clipboardData
+        ).getData('text');
+        el.value = this.sanitizeNumericString(pastedText);
+        this.validateInputs();
+      });
       el.addEventListener('blur', (e) => this.formatTwoDecimals(e));
     });
 
@@ -55,6 +66,16 @@ class ExchangeRateCalculator {
       this.copyBtn.textContent = 'Copied!';
       setTimeout(() => (this.copyBtn.textContent = 'Copy Rate'), 2000);
     });
+  }
+
+  sanitizeNumericString(input) {
+    if (typeof input !== 'string') return '';
+    // Remove everything except digits and dots, then allow only the first dot
+    const cleaned = input.replace(/[^0-9.]/g, '');
+    const parts = cleaned.split('.');
+    const integerPart = parts.shift() || '';
+    const fractionalPart = parts.length ? parts.join('') : '';
+    return fractionalPart ? `${integerPart}.${fractionalPart}` : integerPart;
   }
 
   updateCurrencyUI() {
