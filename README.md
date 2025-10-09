@@ -4,7 +4,7 @@ A modern, responsive web application for calculating exchange rates based on inv
 
 **🌐 Live Demo**: [https://tdrayson.github.io/exchange-rate-calculator/](https://tdrayson.github.io/exchange-rate-calculator/)
 
-Version: **1.1.0** | Updated: **July 2025**
+Version: **1.2.0** | Updated: **December 2024**
 
 ## Features
 
@@ -14,6 +14,8 @@ Version: **1.1.0** | Updated: **July 2025**
 - **Professional UI**: Clean, modern interface with smooth view transitions
 - **Copy to Clipboard**: One-click rate copying for easy sharing
 - **Responsive Design**: Works seamlessly on desktop and mobile devices
+- **Input Sanitization**: Automatically converts pasted values like "1,900" to "1900"
+- **Seamless Mode**: Embeddable mode with `?mode=seamless` for integration into other applications
 
 ## How It Works
 
@@ -33,6 +35,15 @@ The calculator determines the effective exchange rate by:
 4. **Set Target Amount**: Specify the desired GBP amount
 5. **Calculate**: Click "Calculate Rate" to see the results
 6. **Copy Rate**: Use the copy button to copy the calculated rate to clipboard
+
+## Seamless Mode
+
+For embedding the calculator into other applications or websites, use the seamless mode:
+
+- **URL**: Add `?mode=seamless` to the URL
+- **Features**: Removes padding, shadows, rounded corners, and background
+- **Use Cases**: iframe embedding, mobile app webviews, integration into existing interfaces
+- **Example**: `https://tdrayson.github.io/exchange-rate-calculator/?mode=seamless`
 
 ## Project Structure
 
@@ -97,6 +108,16 @@ Feel free to submit issues, feature requests, or pull requests to improve the ca
 ## Changelog
 
 All notable changes to this project will be documented in this section.
+
+### [1.2.0] - 2025-10-09
+
+#### Added
+
+- Seamless mode for embedding (`?mode=seamless`)
+- Input sanitization for pasted values with commas (e.g., "1,900" → "1900")
+- Mobile device detection with data attributes
+- Enhanced CSS overrides for seamless integration
+- Local Tailwind CSS file for improved performance and offline functionality
 
 ### [1.1.1] - 2025-09-17
 
